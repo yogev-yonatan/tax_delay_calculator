@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>מחשבון דחיית מס</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Tax Delay Calculator</h1>
+    <form id="calculatorForm">
+        <label for="initialBalance">סכום ההשקעה (כולל רווחים):</label>
+        <input type="number" id="initialBalance" required>
+	<br>
+        <label for="taxThreshold">השקעה לפני רווחים:</label>
+        <input type="number" id="taxThreshold" required>
+	<br>
+        <label for="managementFee1">דמי ניהול קרן 1 (באחוזים):</label>
+        <input type="number" id="managementFee1" step="0.0001" required>
+	<br>
+        <label for="managementFee2"> דמי ניהול קרן 2 (באחוזים):</label>
+        <input type="number" id="managementFee2" step="0.0001" required>
+	<br>
+        <label for="monthlyGrow">תשואה שנתית צפוייה (באחוזים):</label>
+        <input type="number" id="monthlyGrow" step="0.0001" required>
+	<br>
+        <label for="nYears">שנות השקעה:</label>
+        <input type="number" id="nYears" required>
+	<br>
+        <button type="button" onclick="calculateDifference()">Calculate</button>
+    </form>
+
+    <h2>Result:</h2>
+    <p id="result">-</p>
+
+    <script src="calculator.js"></script>
+</body>
+</html>
